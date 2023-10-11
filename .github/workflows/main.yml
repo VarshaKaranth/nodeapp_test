@@ -2,7 +2,7 @@ name: Publish Docker image
 
 on:
   push:
-    branches: ['master']
+    branches: master
 
 jobs:
   push_to_registry:
@@ -22,7 +22,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: thetips4you/testjodejsapp
+          images: varshakaranth/gitopscalculator
       
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
